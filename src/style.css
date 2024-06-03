@@ -13,6 +13,7 @@
     --almond: #ffead8;
     --red: #D22701;
     --orange: #FF670E;
+    --yellow: #ffa600;
     --green: #0ca714;
 }
 
@@ -22,11 +23,14 @@
 }
 
 body {
+    font-family: 'Elegant typewriter';
+    font-size: 1.1rem;
     background-color: var(--chocolate);
+    color: var(--almond);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 header {
@@ -44,9 +48,48 @@ nav {
     gap: 0.5rem;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Hot Restaurant';
+    font-size: 6rem;
+    color: var(--almond);
+    padding: 15px 0 5px 0;
+    border-bottom: 5px solid var(--yellow);
+}
+
+p{
+    max-width: 300px;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--almond);
+    color: var(--chocolate);
+    box-shadow: 5px 10px 10px var(--red);
+}
+
 #logo {
     height: clamp(60px, 40px, 70px);
     width: auto;
+}
+
+#content {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.main-food {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    border: 1px solid var(--chocolate);
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--red);
 }
 
 .btn {
@@ -82,4 +125,13 @@ nav {
 .about {
     background-color: var(--red);
     color: var(--almond);
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }

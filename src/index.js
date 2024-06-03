@@ -1,6 +1,10 @@
 import './style.css'
 import Logo from './assets/img/cutlery.png'
 
+import { showAbout, showIndex } from './about.js'
+import { showMenu } from './menu.js'
+import { showContact } from './contact.js'
+
 const header = document.querySelector('header')
 const content = document.getElementById('content')
 
@@ -20,18 +24,27 @@ function showNavContent() {
     about.innerText = 'About'
     menu.innerText = 'Menu'
     contact.innerText = 'Contact'
-    about.classList.add('btn')
-    about.classList.add('about')
-    menu.classList.add('btn')
-    menu.classList.add('menu')
-    contact.classList.add('btn')
-    contact.classList.add('contact')
+    about.classList.add('btn', 'about')
+    menu.classList.add('btn', 'menu')
+    contact.classList.add('btn', 'contact')
+    about.addEventListener('click', () => {
+        content.innerHTML = ''
+        content.appendChild(showAbout())
+    })
+    menu.addEventListener('click', () => {
+        content.innerHTML = ''
+        content.appendChild(showMenu())
+    })
+    contact.addEventListener('click', () => {
+        content.innerHTML = ''
+        content.appendChild(showContact())
+    })
     nav.appendChild(about)
     nav.appendChild(menu)
     nav.appendChild(contact)
     return nav
 }
 
-header.appendChild(displayLogo())    
-header.appendChild(showNavContent())    
-
+header.appendChild(displayLogo()) 
+header.appendChild(showNavContent())
+content.appendChild(showIndex())
