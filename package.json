@@ -4,7 +4,7 @@
   "description": "a restaurant site generated with DOM objects",
   "private": true,
   "scripts": {
-    "test": "webpack --watch",
+    "test": "webpack --mode=development --watch",
     "build": "webpack"
   },
   "author": "Aaron MillOro",
