@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Hot Restaurant';
+    src: url('./assets/fonts/Hot_Restaurant.ttf');
+}
+
+@font-face {
+    font-family: 'Elegant typewriter';
+    src: url('./assets/fonts/ELEGANT_TYPEWRITER_Regular.ttf');
+}
+
+:root{
+    --chocolate: #4E070C;
+    --almond: #ffead8;
+    --red: #D22701;
+    --orange: #FF670E;
+    --green: #0ca714;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--chocolate);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#logo {
+    height: clamp(60px, 40px, 70px);
+    width: auto;
+}
+
+.btn {
+    font-family: 'Elegant typewriter';
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.2rem;
+    width: 90px;
+    height: 90px;
+    border: 2px solid var(--chocolate);
+    border-radius: 50%;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: 0 0 15px var(--almond);
+    transform: scale(0.9);
+}
+
+.contact {
+    background-color: var(--green);
+    color: var(--almond);
+}
+
+.menu {
+    background-color: var(--orange);
+    color: var(--almond);
+}
+.about {
+    background-color: var(--red);
+    color: var(--almond);
+}
