@@ -71,7 +71,7 @@ p {
     box-shadow: 5px 10px 10px var(--red);
 }
 
-.menu-details {
+.page-details {
     display: flex;
     flex-direction: column;
 }
