@@ -8,6 +8,7 @@ const showAbout = () => {
     const contentSection = document.createElement('section')
     contentSection.classList.add('info')
     const info = document.createElement('p')
+    info.classList.add('restaurant-info')
     const burger = getImage(Burger, 'main burger')
     contentSection.appendChild(burger)
     info.innerText = `
