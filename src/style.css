@@ -190,3 +190,45 @@ a {
     color: var(--yellow);
     text-decoration: none;
 }
+
+.topBottom {
+    animation: appear 400ms ease-in, top-bottom 400ms ease-in;
+}
+
+.expand {
+    animation: appear 400ms ease-in, boom 400ms ease-in;
+}
+
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes top-bottom {
+    0% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(0.85);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

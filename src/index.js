@@ -31,16 +31,28 @@ function showNavContent() {
     contact.classList.add('btn', 'contact')
     about.addEventListener('click', () => {
         content.innerHTML = ''
+        content.classList.toggle('topBottom')
         content.appendChild(showAbout())
+        setTimeout(() => {
+            content.classList.toggle('topBottom')
+        }, 500)
     })
     menu.addEventListener('click', () => {
         content.innerHTML = ''
+        content.classList.toggle('expand')
         content.appendChild(showMenu())
+        setTimeout(() => {
+            content.classList.toggle('expand')
+        }, 500)
     })
     contact.addEventListener('click', () => {
         content.innerHTML = ''
+        content.classList.toggle('expand')
         content.appendChild(showContact())
         showMap()
+        setTimeout(() => {
+            content.classList.toggle('expand')
+        }, 500)
     })
     nav.appendChild(about)
     nav.appendChild(menu)
@@ -52,5 +64,9 @@ footer.innerHTML = `A creation of <a href="https://aaronmillan.xyz" target="_bla
 
 header.appendChild(displayLogo()) 
 header.appendChild(showNavContent())
+content.classList.toggle('topBottom')
 content.appendChild(showIndex())
+setTimeout(() => {
+    content.classList.toggle('topBottom')
+}, 500)
 document.body.appendChild(footer)
