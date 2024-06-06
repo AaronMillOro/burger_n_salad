@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "test": "webpack --mode=development --watch",
-    "build": "webpack"
+    "build": "webpack --mode=production",
+    "deploy-gp-init": "git push origin && git subtree push --prefix dist origin gh-pages",
+    "deploy-gp": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "author": "Aaron MillOro",
   "license": "MIT",
