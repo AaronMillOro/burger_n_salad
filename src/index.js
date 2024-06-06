@@ -4,6 +4,7 @@ import Logo from './assets/img/cutlery.png'
 import { showAbout, showIndex } from './about.js'
 import { showMenu } from './menu.js'
 import { showContact } from './contact.js'
+import { showMap } from './leafletMap.js'
 
 const header = document.querySelector('header')
 const content = document.getElementById('content')
@@ -38,6 +39,7 @@ function showNavContent() {
     contact.addEventListener('click', () => {
         content.innerHTML = ''
         content.appendChild(showContact())
+        showMap()
     })
     nav.appendChild(about)
     nav.appendChild(menu)
