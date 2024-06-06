@@ -8,6 +8,7 @@ import { showMap } from './leafletMap.js'
 
 const header = document.querySelector('header')
 const content = document.getElementById('content')
+const footer = document.createElement('footer')
 
 function displayLogo(){
     const logo = new Image()
@@ -47,6 +48,9 @@ function showNavContent() {
     return nav
 }
 
+footer.innerHTML = `A creation of <a href="https://aaronmillan.xyz" target="_blank"> AMO </a>`
+
 header.appendChild(displayLogo()) 
 header.appendChild(showNavContent())
 content.appendChild(showIndex())
+document.body.appendChild(footer)
